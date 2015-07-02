@@ -1,0 +1,18 @@
+The first procedure runs recursive process, because the subprocedure (+ (dec a) b) need to be evaluated first before being process by it's parent procedure inc. So the process would look like:
+(+ 4 5)
+(inc (+ 3 5))
+(inc (inc (+ 2 5)))
+(inc (inc (inc (+ 1 5))))
+(inc (inc (inc (inc 5))))
+(inc (inc (inc 6)))
+(inc (inc 7))
+(inc 8)
+9
+
+The second procedure runs iterative process, because the process of (dec a) (inc b) keep iterating themselves until they meet the predicate (= a 0). So the process would look like:
+(+ 4 5)
+(+ 3 6)
+(+ 2 7)
+(+ 1 8)
+9
+
