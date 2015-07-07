@@ -95,3 +95,15 @@ false
 (define ex19 (bitmap "./img/ex1,9.png"))
 ;Ex1.9 Answer
 (define a19 (bitmap "./answers/an1,9.png"))
+
+;Ex1.10 : run both:
+(define ex1101 (bitmap "./img/ex1,10,1.png"))
+(define ex1102 (bitmap "./img/ex1,10,2.png"))
+
+;(A 1 10) -> 1024
+;(A 2 4) -> 65536
+;(A 3 3) -> 65536
+
+;(A 1 10) -> 2^10
+;(A 2 4) -> 2^2^4
+;(A 3 3) -> 2^2^4
