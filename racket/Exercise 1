@@ -111,6 +111,7 @@ false
 ;Ex 1.11 : Run 
 (define ex111 (bitmap "./img/ex1,11.png"))
 
+;;recursive
 (define (an111 n)
   (if (< n 3)
       n
@@ -118,7 +119,11 @@ false
          (* 2 (an111 (- n 2)))
          (* 3 (an111 (- n 3))))))
 
-(define (an1112 a b c n)
+;;iterative
+(define (aniter a b c n)
   (if (= n 0)
       c
-      (an1112 (+ a (* b 2) (* c 3)) a b (- n 1))))
+      (aniter (+ a (* b 2) (* c 3)) a b (- n 1))))
+
+(define (an1112 n)
+  (aniter 2 1 0 n))
