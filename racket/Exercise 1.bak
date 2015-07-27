@@ -127,11 +127,3 @@ false
 
 (define (an1112 n)
   (aniter 2 1 0 n))
-
-;Ex 1.12 : Run
-(define ex112 (bitmap "./img/ex1,12.png"))
-
-(define (pascal row n)
-  (cond ((or (= row 0) (= n 0) (< row n)) 0) 
-        ((or (= 1 n) (= row n)) 1)
-        (else (+ (pascal (- row 1) n) (pascal (- row 1) (- n 1))))))
