@@ -146,4 +146,3 @@ false
 
 (define (ph n)
   (/ (expt p n) (sqrt 5)))
-
